@@ -1,5 +1,7 @@
 # https://github.com/amkdg/Dotfiles
 
+export PATH=/opt/homebrew/opt/python@3.9/libexec/bin:$PATH
+
 # Aliases
 alias fuck="sudo !!"
 
