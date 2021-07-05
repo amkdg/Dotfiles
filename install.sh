@@ -62,7 +62,7 @@ fi
 
 # -----------------------------------------------------
 
-python3 _install.py  # Install the actual dotfiles
+python3 dotfiles.py  # Install the actual dotfiles
 
 if command -v code > /dev/null; then
     /bin/bash Other/vscode.sh
