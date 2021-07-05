@@ -16,4 +16,4 @@ Requires `bash` and `python3` to be on `$PATH`
 3. If you intend to use iTerm, refer to your operating system's manual to install [fonts](https://github.com/amkdg/Dotfiles/tree/main/Fonts) and manually import the [iTerm profile](https://github.com/amkdg/Dotfiles/blob/main/Dotfiles/Other%20(Not%20sourced)/iterm.conf.json) in preferences.
 
 ## Updating?
-The dotfiles are symlinked, not copied over to your home directory. You can run `git pull` to fetch any changes from this repository or your own fork.
+The dotfiles are symlinked, not copied over to your home directory. You can run `git pull` to fetch any updates from this repository or your own fork.
