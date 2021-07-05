@@ -15,6 +15,9 @@ if "$OSTYPE" == "darwin"*; then
     /bin/bash Other/brewfile.sh  # Install brew packages
     /bin/bash Other/caskfile.sh  # Install brew casks
 
+    # Set wallpaper
+    osascript Wallpaper/osx_set_wallpaper.scpt
+
 # Linux stuff
 elif "$OSTYPE" == "linux"*; then
     packages_to_install = 'python3'
