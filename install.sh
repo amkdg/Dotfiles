@@ -3,7 +3,7 @@
 CPUARCH=`arch`  # Get CPU architecture
 
 # macOS stuff
-if "$OSTYPE" == "darwin"*; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH
 
     # Set up homebrew
@@ -19,7 +19,7 @@ if "$OSTYPE" == "darwin"*; then
     osascript Wallpaper/osx_set_wallpaper.scpt
 
 # Linux stuff
-elif "$OSTYPE" == "linux"*; then
+elif [[ "$OSTYPE" == "linux"* ]]; then
     packages_to_install = 'python3'
 
     if ! command -v $packages_to_install > /dev/null; then

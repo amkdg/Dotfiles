@@ -1,4 +1,4 @@
-# https://github.com/amkdg/Dotfiles
+" https://github.com/amkdg/Dotfiles
 
 set nocompatible
 filetype off
