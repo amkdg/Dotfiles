@@ -14,6 +14,7 @@ alias documents="cd ~/Documents"
 alias developer="cd ~/Developer"
 
 alias reload="clear; exec ${SHELL} -l"
+alias tpminstall="~/.tmux/plugins/tpm/scripts/install_plugins.sh"
 
 pfetch
 

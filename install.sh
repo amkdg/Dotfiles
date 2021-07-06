@@ -82,3 +82,17 @@ if command -v vim > /dev/null && test -f ~/.vimrc; then
     vim -u ~/Desktop/vimrc.temp -c PluginInstall -c qall
     rm -rf ~/Desktop/vimrc.temp
 fi
+
+
+if command -v tmux > /dev/null && test -f ~/.tmux.conf; then
+    # Setup tpm
+    if ! test -d ~/.tmux/plugins/tpm; then
+        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    fi
+fi
+
+# Install tmux plugins and apply the changes
+tmux source-file ~/.tmux.conf
+~/.tmux/plugins/tpm/scripts/install_plugins.sh
+tmux source-file ~/.tmux.conf
+
