@@ -8,7 +8,7 @@ Includes configs for zsh, vim, iTerm and tmux.
 
 ## Compatibility & Requirements
 Script compatible and tested with macOS 10-12 as well as most Linux distributions. \
-Requires `bash` and `python3` to be on `$PATH`
+Requires `bash`, `python3`, and `git` to be on `$PATH`
 
 ## Installation
 Please note that this script does not overwrite any existing dotfiles of the same name. Save or remove them manually before running this script.
