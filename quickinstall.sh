@@ -5,6 +5,7 @@ CPUARCH=`arch`  # Get CPU architecture
 # macOS stuff
 if [[ "$OSTYPE" == "darwin"* ]]; then
     xcode-select --install
+fi
 
 mkdir ~/Developer; cd ~/Developer
 
