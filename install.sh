@@ -17,24 +17,28 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
     # Set wallpaper
     osascript Wallpaper/osx_set_wallpaper.scpt
+    
+    # (Try to) Install fonts. 
+    cp Fonts/*.otf ~/Library/Fonts
+    cp Fonts/*.ttf ~/Library/Fonts
 
 # Linux stuff
 elif [[ "$OSTYPE" == "linux"* ]]; then
     packages_to_install = 'python3'
 
-    if ! command -v $packages_to_install > /dev/null; then
+    if ! command -v $packages_to_install; then
         echo "Could not find 1 or more of the following packages: $packages_to_install on your system."
         echo "If you have them, make sure they are on \$PATH\n\n."
 
         INSTALL_COMMAND=""
 
-        if command -v pacman > /dev/null; then  # Arch btw
+        if command -v pacman; then  # Arch btw
             INSTALL_COMMAND="sudo pacman -S $packages_to_install"
-        elif command -v apt > /dev/null;  then
+        elif command -v apt;  then
             INSTALL_COMMAND="sudo apt install -y $packages_to_install"
-        elif command -v dnf > /dev/null;  then
+        elif command -v dnf;  then
             INSTALL_COMMAND="sudo dnf install -y $packages_to_install"
-        elif command -v apk > /dev/null;  then
+        elif command -v apk;  then
             INSTALL_COMMAND="sudo apk add $packages_to_install"
         else
             echo "Could not find a working package manager on your system. You must manually install: $packages_to_install"
@@ -67,11 +71,11 @@ fi
 
 python3 dotfiles.py  # Install the actual dotfiles
 
-if command -v code > /dev/null; then
+if command -v code; then
     /bin/bash Other/vscode.sh
 fi
 
-if command -v vim > /dev/null && test -f ~/.vimrc; then
+if command -v vim && test -f ~/.vimrc; then
     # Setup vundle
     if ! test -d ~/.vim/bundle/Vundle.vim; then
         git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -84,7 +88,7 @@ if command -v vim > /dev/null && test -f ~/.vimrc; then
 fi
 
 
-if command -v tmux > /dev/null && test -f ~/.tmux.conf; then
+if command -v tmux && test -f ~/.tmux.conf; then
     # Setup tpm
     if ! test -d ~/.tmux/plugins/tpm; then
         git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
